@@ -37,7 +37,7 @@ Moving on to model selection for forecasting, given the multivariate nature of o
 <br>
 <br>
 The Augmented Dickey-Fuller (ADF) test results for each stock’s closing price indicate:
-<br.
+<br>
 1. AAPL: The p-value is 0.927, suggesting we failed to reject the null hypothesis, and the series is non-stationary.
 <br>
 2. MSFT: With a p-value of 0.944, this series is also non-stationary.
