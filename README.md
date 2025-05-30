@@ -37,14 +37,28 @@ Moving on to model selection for forecasting, given the multivariate nature of o
 <br>
 <br>
 The Augmented Dickey-Fuller (ADF) test results for each stock’s closing price indicate:
+<br.
 1. AAPL: The p-value is 0.927, suggesting we failed to reject the null hypothesis, and the series is non-stationary.
+<br>
 2. MSFT: With a p-value of 0.944, this series is also non-stationary.
+<br>
 3. NFLX: The p-value is 0.225, indicating non-stationarity.
+<br>
 4. GOOG: The p-value is 0.567, again indicating non-stationarity.
 <br>
 <br>
 After differencing the closing prices, the Augmented Dickey-Fuller (ADF) test results for each differenced series are:
+<br>
 1. AAPL – Differenced: The p-value is significantly less than 0.05, indicating that we can reject the null hypothesis. The series is stationary.
+<br>
 2. MSFT – Differenced: Similarly, the p-value is significantly low, confirming stationarity.
+<br>
 3. NFLX – Differenced: With a very low p-value, this series is also stationary.
+<br>
 4. GOOG – Differenced: This series is stationary as well, indicated by a very low p-value.
+<br>
+<br>
+So, this is how you can perform Multivariate Time Series Forecasting using Python. Multivariate Time Series Forecasting is preferable when the variables may have dependencies or interactions with one another. The goal is to capture these interdependencies to make accurate predictions for each variable over a future time period.
+
+# Contributing
+If you are interested in contributing to the project, please create a fork of the repository and submit a pull request. All contributions are welcome and appreciated.
