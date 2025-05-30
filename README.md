@@ -30,3 +30,21 @@ The dataset consists of the following columns:
 8. Volume: The number of shares traded during the trading session.
 
 # Conclusion
+Moving on to model selection for forecasting, given the multivariate nature of our data, a Vector AutoRegression (VAR) model could be a suitable choice. VAR models can capture the linear interdependencies among multiple time series, which makes them a good fit for forecasting the prices of several stocks simultaneously. Before we proceed with VAR modelling, it’s important to ensure that the time series data for each stock is stationary, as VAR models require stationarity. Stationarity means the statistical properties of the series (mean, variance) do not change over time. Let’s perform the following steps:
+1. Use the Augmented Dickey-Fuller (ADF) test for each stock’s closing price.
+2. Depending on the ADF test results, we may need to transform the data (e.g., by differencing) to achieve stationarity.
+3. Train the VAR model and forecast the future values.
+<br>
+<br>
+The Augmented Dickey-Fuller (ADF) test results for each stock’s closing price indicate:
+1. AAPL: The p-value is 0.927, suggesting we failed to reject the null hypothesis, and the series is non-stationary.
+2. MSFT: With a p-value of 0.944, this series is also non-stationary.
+3. NFLX: The p-value is 0.225, indicating non-stationarity.
+4. GOOG: The p-value is 0.567, again indicating non-stationarity.
+<br>
+<br>
+After differencing the closing prices, the Augmented Dickey-Fuller (ADF) test results for each differenced series are:
+1. AAPL – Differenced: The p-value is significantly less than 0.05, indicating that we can reject the null hypothesis. The series is stationary.
+2. MSFT – Differenced: Similarly, the p-value is significantly low, confirming stationarity.
+3. NFLX – Differenced: With a very low p-value, this series is also stationary.
+4. GOOG – Differenced: This series is stationary as well, indicated by a very low p-value.
